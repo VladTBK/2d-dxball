@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4ebtysuu5f22"]
+
+[ext_resource type="Script" path="res://gdscripts/enemy.gd" id="1_mv333"]
+[ext_resource type="PackedScene" uid="uid://nbkit4hfh5yg" path="res://ball.tscn" id="2_ng406"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltkoy"]
+size = Vector2(16, 16)
+
+[node name="Enemy" type="StaticBody2D" groups=["enemy"]]
+scale = Vector2(0.989657, 0.988254)
+disable_mode = 1
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_mv333")
+ball_reference = ExtResource("2_ng406")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.08361
+offset_top = -8.09509
+offset_right = 7.91639
+offset_bottom = 7.90491
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ltkoy")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciunftqmqpnny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejrt1"]
+size = Vector2(1280, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54ojl"]
+size = Vector2(32, 704)
+
+[node name="ControlNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BottomBorder" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="Bottom" type="CollisionShape2D" parent="BottomBorder"]
+position = Vector2(640, 712)
+shape = SubResource("RectangleShape2D_ejrt1")
+
+[node name="GeneralBorders" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="Left" type="CollisionShape2D" parent="GeneralBorders"]
+position = Vector2(-16, 352)
+shape = SubResource("RectangleShape2D_54ojl")
+
+[node name="Right" type="CollisionShape2D" parent="GeneralBorders"]
+position = Vector2(1296, 352)
+shape = SubResource("RectangleShape2D_54ojl")
+
+[node name="Top" type="CollisionShape2D" parent="GeneralBorders"]
+position = Vector2(640, -16)
+shape = SubResource("RectangleShape2D_ejrt1")

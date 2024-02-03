@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1lsn326tsug5"]
+
+[ext_resource type="PackedScene" uid="uid://c4ebtysuu5f22" path="res://enemy.tscn" id="1_wr5e1"]
+[ext_resource type="Script" path="res://gdscripts/circle.gd" id="2_wpmqh"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_n4wr5"]
+scenes/0/scene = ExtResource("1_wr5e1")
+
+[sub_resource type="TileSet" id="TileSet_kh0bh"]
+sources/0 = SubResource("TileSetScenesCollectionSource_n4wr5")
+
+[node name="Layouts" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." groups=["layout1"]]
+position = Vector2(632, 192)
+tile_set = SubResource("TileSet_kh0bh")
+format = 2
+script = ExtResource("2_wpmqh")

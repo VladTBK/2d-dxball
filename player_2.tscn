@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://3i5dxwnxdp0h"]
+
+[ext_resource type="Script" path="res://gdscripts/player.gd" id="1_hrbce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85sac"]
+size = Vector2(20, 128)
+
+[node name="Player2" type="StaticBody2D" groups=["player"]]
+script = ExtResource("1_hrbce")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 128.0
+offset_bottom = 24.0
+
+[node name="bigboishape" type="CollisionShape2D" parent="."]
+position = Vector2(64, 8)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_85sac")
