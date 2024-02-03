@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://623ruo2iv3yy"]
+[gd_scene load_steps=7 format=3 uid="uid://623ruo2iv3yy"]
 
 [ext_resource type="Script" path="res://gdscripts/main.gd" id="1_guhtl"]
 [ext_resource type="PackedScene" uid="uid://ciunftqmqpnny" path="res://UI/control_node.tscn" id="2_51mu5"]
 [ext_resource type="PackedScene" uid="uid://d1lsn326tsug5" path="res://UI/layouts.tscn" id="2_nh826"]
 [ext_resource type="PackedScene" uid="uid://nbkit4hfh5yg" path="res://ball.tscn" id="3_5dylb"]
 [ext_resource type="PackedScene" uid="uid://3i5dxwnxdp0h" path="res://player_2.tscn" id="4_3wepl"]
+[ext_resource type="AudioStream" uid="uid://6n8i60dfi3sb" path="res://UI/pong-boi.mp3" id="6_bgdlm"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_guhtl")
@@ -18,3 +19,9 @@ position = Vector2(640, 512)
 position = Vector2(576, 640)
 
 [node name="Layouts" parent="." instance=ExtResource("2_nh826")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_bgdlm")
+volume_db = 3.0
+pitch_scale = 1.3
+autoplay = true
